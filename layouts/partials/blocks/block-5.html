@@ -1,0 +1,26 @@
+<section class="block-5">
+    <div class="container"> 
+        {{- with .Params.title -}}
+            {{ . | markdownify }}
+        {{- end -}}  
+        <div class="block-5_cont"> 
+            {{- with .Params.img -}}<img class="block-5_img lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg"/>{{- end -}}
+            {{- with .Params.list -}}
+                <div class="block-5_column"> 
+                    {{- range . -}}
+                        <div class="block-5_items">
+                            {{- with .img -}}
+                                <div class="block-5_items_img">
+                                    <img class="lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg"/>
+                                </div>
+                            {{- end -}}
+                            {{- with .text -}} 
+                                <p>{{ . }}</p>
+                            {{- end -}}
+                        </div>
+                    {{- end -}}  
+                </div>
+            {{- end -}}  
+        </div>
+    </div>
+</section>

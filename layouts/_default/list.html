@@ -1,0 +1,48 @@
+ {{ define "main" }} 
+  <section class="product">
+    <div class="container">
+      <div class="row">
+        <div class="product_cont">
+          {{ $pag := .Paginate (where (where .Site.Pages "Type" "blog") "IsPage" true) }}
+          {{ range $pag.Pages }}
+          <div class="product_cont_list">
+              <div class="product_cont_list_img">
+                <img src="{{ .Params.small_img | absURL }}" alt="blog-img" />
+              </div> 
+              <div class="product_cont_list_column">
+                <a href="{{ .Permalink }}" class="product-title">{{ .Title }}</a>
+                {{ $taxo := "tags" }}  
+                <div class="tags">
+                    {{ range .Param $taxo }}
+                        {{ $name := . }}
+                        {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                            <span>{{ $name }} | </span>
+                        {{ end }}
+                    {{ end }}<span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                </div>
+                <p class="product_cont_list_column_sub">{{ .Params.paragraph }}</p>
+              </div> 
+          </div>
+          {{ end }}
+          {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+          <div class="pager {{ if not .Paginator.HasPrev }} end {{ end }}">
+          {{ if .Paginator.HasPrev }}
+            <a class="pager-button pager-button-prev" href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}" >
+            <img class="pager-button_img" src="{{ "svg/prev.svg" | absURL }}" alt="arrow" />
+            Prev
+            </a>
+          {{ end }}
+          {{ if .Paginator.HasNext }}
+            <a class="pager-button pager-button-next" href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}" >Next
+            <img class="pager-button_img" src="{{ "svg/next.svg" | absURL }}" alt="arrow" />
+            </a>
+          {{ end }}
+          </div>
+        {{ end }}
+        </div>
+      </div>
+    </div>
+    <img class="general_img" src="{{ "img/features.jpg" | absURL }}" alt="bg"/>
+  </section>
+{{ end }}
+

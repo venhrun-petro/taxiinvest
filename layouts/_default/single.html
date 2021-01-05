@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+  {{ partial "head.html" . }}
+  <body>
+  {{ partial "header.html" . }}
+  <div class="main">
+    <div class="post">
+      <img class="post_img" src="{{ .Params.img | absURL }}" alt="bg" />
+    </div>
+    <section class="content">
+      <img class="general_img" src="{{ "img/features.jpg" | absURL }}" alt="bg"/> 
+      <div class="container">
+        <div class="content_cont">
+          <div class="content_cont_bottom" id="element-print">
+            <h2>{{ .Params.Title }}</h2>
+              {{ $taxo := "tags" }}  
+              <div class="tags">
+                  {{ range .Param $taxo }}
+                      {{ $name := . }}
+                      {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                          <span>{{ $name }} | </span>
+                      {{ end }}
+                  {{ end }}<span>{{ .Date.Format "Jan 2, 2006" }}</span>
+              </div>
+          <!-- <p class="product_cont_sub">{{ .Params.paragraph }}</p> -->
+            <div class="post_content">
+                {{ .Content }}
+            </div>
+          </div>
+        </div>
+        <div class="pager {{ if not .PrevInSection }} end {{ end }}">
+          {{ if .PrevInSection }} 
+            <a class="pager-button pager-button-prev" href="{{ .PrevInSection.Permalink }}" >
+              <img class="pager-button_img" src="{{ "svg/prev.svg" | absURL }}" alt="arrow" />
+              Prev
+            </a>
+          {{ end }}
+          {{ if .NextInSection }} 
+            <a class="pager-button pager-button-next" href="{{ .NextInSection.Permalink }}" >Next
+              <img class="pager-button_img" src="{{ "svg/next.svg" | absURL }}" alt="arrow" />
+            </a>
+          {{ end }}
+          </div>
+      </div> 
+    </section>
+  </div>
+  {{ partial "footer.html" . }}
+  </body>
+</html>

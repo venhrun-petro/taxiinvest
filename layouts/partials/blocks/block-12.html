@@ -1,0 +1,65 @@
+<section class="block-12">
+    <div class="container">
+        {{- with .Params.title -}} 
+            <h4>{{ . }}</h4>
+        {{- end -}} 
+        {{- with .Params.text -}} 
+            <p>{{ . }}</p>
+        {{- end -}} 
+        <div class="row">
+            <div class="block-12_cont">
+                {{- with .Params.video_box -}}
+                    <div class="block-video" {{- with .video -}}data-video="{{ . }}"{{- end -}}>
+                        <div class="block-video_modal">
+                            <span class="modal_close"></span>
+                            <div class="block-video_iframe"></div>
+                        </div>
+                        <a class="block-video_play" href="#play">
+                            <img class="lazy" data-src="{{ "img/play.webp" | absURL }}" data-srcset="{{ "img/play.webp" | absURL }}" alt="bg">
+                        </a>
+                        {{- with .img -}}
+                            <img class="block-video_img lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg">
+                        {{- end -}}
+                    </div>
+                {{- end -}} 
+                <div class="block-12_cont_content">
+                    <div class="block-12_max-c">
+                        {{- with .Params.blue_text -}}
+                            <div class="block-blue"> 
+                                <p>{{ . }}</p>
+                            </div> 
+                        {{- end -}} 
+                        {{- with .Params.people -}}
+                            <div class="block-people">
+                                {{- with .img -}}
+                                    <img class="block-people_img lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg">
+                                {{- end -}}
+                                <div class="block-people_content">
+                                    {{- with .name -}}
+                                        <h5 class="only-for-optimization"></h5>
+                                        <h6>{{ . }}</h6>
+                                    {{- end -}} 
+                                    {{- with .text -}}
+                                        <p>{{ . | markdownify }}</p>
+                                    {{- end -}}
+                                </div>
+                            </div> 
+                        {{- end -}} 
+                    </div>
+                    <div class="block-12_cont_bottom">
+                        {{- with .Params.bottom_text -}}<h3>{{ . }}</h3>{{- end -}}
+                        {{- with .Params.button -}}
+                            <a class="btn-read" {{- with .link -}} href="{{ . }}" {{- end -}}>
+                                {{- with .text -}}<span>{{ . }}</span>{{- end -}}
+                                <div class="btn-read_img" style="-webkit-mask-image: url('../img/svg/arrow.svg');
+                                            mask-image: url('../img/svg/arrow.svg');">
+                                </div>
+                            </a>
+                        {{- end -}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{- with .Params.img -}}<img class="general_img lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg"/>{{- end -}}
+</section>

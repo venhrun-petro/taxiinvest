@@ -1,0 +1,102 @@
+<footer class="footer">
+  <div class="container"> 
+    <a href="/" class="footer_logo">
+      <img class="footer_logo_img lazy" data-src="{{ "img/logo.svg" | absURL }}" data-srcset="{{ "img/logo.svg" | absURL }}" alt="footer-logo" />
+    </a>
+    <div class="row"> 
+      <div class="footer_cont">
+        <div class="footer_info">
+          <div class="footer_info_list">
+              <h3>Sign up for our mailing list</h3>
+              <form method="POST">
+                  <label><span>sads</span>
+                    <input type="email" name="email" placeholder="Subscribe" required="required">
+                  </label> 
+                  
+                  <button class="form_btn" type="submit">Subscribe</button>
+              </form>
+          </div>
+          <div class="footer_info_list">
+            <h3>Follow us</h3>
+            <div class="footer_soz">
+              <a class="footer_soz_item" href="#">
+                <img class="footer_soz_item_img lazy" data-srcset="{{ "img/svg/instagram.svg" | absURL }}" data-src="{{ "img/svg/instagram.svg" | absURL }}" alt="footer-logo" />
+                <!-- <div class="footer_soz_item_img" 
+                  style="-webkit-mask-image: url('../img/svg/instagram.svg');
+                        mask-image: url('../img/svg/instagram.svg');">
+                </div> -->
+              </a>
+              <a class="footer_soz_item" href="#">
+                <img class="footer_soz_item_img lazy" data-srcset="{{ "img/svg/facebook.svg" | absURL }}" data-src="{{ "img/svg/facebook.svg" | absURL }}" alt="footer-logo" />
+              </a>
+              <a class="footer_soz_item" href="#">
+                <img class="footer_soz_item_img lazy" data-srcset="{{ "img/svg/linkedin.svg" | absURL }}" data-src="{{ "img/svg/linkedin.svg" | absURL }}" alt="footer-logo" />
+              </a>
+              <a class="footer_soz_item" href="#">
+                <img class="footer_soz_item_img lazy"  data-srcset="{{ "img/svg/twitter.svg" | absURL }}" data-src="{{ "img/svg/twitter.svg" | absURL }}" alt="footer-logo" />
+              </a>
+              <a class="footer_soz_item" href="#">
+                <img class="footer_soz_item_img lazy" data-srcset="{{ "img/svg/youtube.svg" | absURL }}" data-src="{{ "img/svg/youtube.svg" | absURL }}" alt="footer-logo" />
+              </a> 
+            </div>
+          </div> 
+        </div>
+        <div class="footer_nav">
+          <div class="footer_nav_list">
+            <h2>Sea Life Rescue</h2>
+            <ul>
+              <li><a href="/" class="footer_nav_items">Home</a></li>
+              <li><a href="/" class="footer_nav_items">The Challenge</a></li>
+              <li><a href="/" class="footer_nav_items">Our Solution</a></li>
+              <li><a href="/" class="footer_nav_items">Our Technology</a></li>
+            </ul>
+          </div> 
+          <div class="footer_nav_list">
+            <h2>About</h2>
+            <ul>
+              <li><a href="/" class="footer_nav_items">Who we are</a></li>
+              <li><a href="/" class="footer_nav_items">Join Sea Life Rescue</a></li>
+              <li><a href="/" class="footer_nav_items">Yachting</a></li> 
+            </ul>  
+          </div>
+          <div class="footer_nav_list">
+            <h2>Help</h2>
+            <ul>
+              <li><a href="/" class="footer_nav_items">Donate</a></li>
+              <li><a href="/" class="footer_nav_items">FAQ</a></li>
+              <li><a href="/" class="footer_nav_items">Contact</a></li>
+              <li><a href="/" class="footer_nav_items">Site Map</a></li>
+            </ul> 
+          </div>
+          <div class="footer_nav_list">
+            <h2>Legal</h2>
+            <ul>
+              <li><a href="/" class="footer_nav_items">Search</a></li>
+              <li><a href="/" class="footer_nav_items">Privacy Policy</a></li>
+              <li><a href="/" class="footer_nav_items">Cookie Policy</a></li> 
+            </ul> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <picture>
+    <source class="general_img lazy" media="(max-width:767px)" data-srcset="{{ "img/mobail/footer.webp" | absURL }}"> 
+    <img class="general_img lazy" data-src="{{ "img/footer.webp" | absURL }}"  alt="Flowers" >
+  </picture>
+  <!-- <img class="general_img lazy" data-src="{{ "img/footer.webp" | absURL }}" data-srcset="{{ "img/footer.webp" | absURL }}" alt="bg"/> -->
+</footer>
+<div class="footer_bottom">
+  <div class="container">  
+    <div class="footer_bottom_cont">
+        <p>1133 S.E. 4th Avenue, Fort Lauderdale, FL 33316</p>   
+        <div class="footer_bottom_info">
+          <a href="#">info@sealiferescue.org</a>
+          <p>&nbsp; - &nbsp;</p>
+          <a href="#">+1 (954) 376 1743​</a>
+        </div>
+        <p>&copy; {{ now.Format "2006"}} Sea Life Rescue Inc. All rights reserved.​</p>
+    </div> 
+  </div> 
+</div>
+{{ partial "javascript.html" . }}

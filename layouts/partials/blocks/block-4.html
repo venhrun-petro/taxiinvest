@@ -1,0 +1,32 @@
+<section class="block-4">
+    <div class="container"> 
+        <div class="block-4_cont">
+            <div class="block-4_column">
+                {{- with .Params.colection_2 -}}
+                    <div class="block-4_column_collection">
+                        {{ . | markdownify }}
+                    </div>
+                {{- end -}} 
+            </div>
+            <div class="block-4_column">
+                {{- with .Params.colection_1 -}}
+                    <div class="block-4_column_collection">
+                        {{ . | markdownify }}
+                    </div>
+                {{- end -}} 
+                {{- with .Params.colection_3 -}}
+                    <div class="block-4_column_collection">
+                        {{ . | markdownify }}
+                    </div>
+                {{- end -}} 
+            </div>  
+        </div>
+    </div>
+    {{- with .Params.img -}}
+        <picture>
+        <source class="general_img lazy" media="(max-width:767px)" data-srcset="{{ .mobail | absURL }}"> 
+        <img class="general_img lazy" data-src="{{ .desktop | absURL }}"  alt="Flowers" >
+      </picture>
+    <!-- <img class="general_img lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg"/> -->
+    {{- end -}}
+</section>

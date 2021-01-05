@@ -1,0 +1,28 @@
+// @import "./vendors/slick.scss";
+// @import "./vendors/slick-theme.scss";
+
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+@import './base/global';
+@import './base/fonts';
+@import './base/typography';
+
+@import './layout/header';
+@import './layout/burger';
+@import './layout/footer';
+
+
+@import './components/hero';
+@import './components/block-1';
+@import './components/block-2'; 
+@import './components/block-3';
+@import './components/block-4';
+@import './components/block-5';
+@import './components/block-6';
+@import './components/block-7';
+@import './components/block-8';
+@import './components/block-9';
+@import './components/block-10';
+@import './components/block-11';
+@import './components/block-12';

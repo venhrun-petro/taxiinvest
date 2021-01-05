@@ -1,0 +1,109 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  box-sizing: border-box; 
+  // &:before{
+  //   content: ' ';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 3;
+  //   background: linear-gradient(0deg, rgba(0, 61, 152, 0.48), rgba(0, 61, 152, 0.48));
+  // } 
+  &_cont {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & *{
+      position: relative;
+      z-index: 9;
+    }
+    h1{
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 112.2%;
+      max-width: 748px;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 55px;
+      @include md {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 28px;
+        max-width: 485px;
+        margin: 0 auto 30px;
+      }
+    }
+    .general_paragraph{
+      color: #FFFFFF;
+      max-width: 475px;
+      margin: 0 auto 55px;
+      text-align: center;
+      @include md {
+        max-width: 264px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+  } 
+}
+
+.img-diver{
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+  transform: translate(-35%, 50%);
+  z-index: 6!important; 
+  max-width: 100%;
+  @include md {
+    max-width: 500px;
+    left: 185px;
+  }
+  @include sm {
+    left: 75px;
+  }
+  @include xsl {
+    left: 0;
+  }
+  @include xs {
+    max-width: 100%;
+    bottom: 10px;
+  }
+}
+.img-bottom{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: center 0px;
+  z-index: 4;
+}
+.bg-video{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+} 
+.only-for-optimization{
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+}

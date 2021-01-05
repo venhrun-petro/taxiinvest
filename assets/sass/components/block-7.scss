@@ -1,0 +1,178 @@
+.block-7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 80px 0 40px;
+  @include md {
+    padding: 40px 0;
+  }
+  &.revers{
+    .block-7_cont{
+      flex-direction: row-reverse;
+      @include md {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      &_left{ 
+        left: auto;
+        right: -90px;
+        @include l {
+          right: 0px;
+          padding-left: 15px;
+        }
+        @include md {
+          padding-left: 0px;
+          width: 100%;
+          max-width: 700px;
+        }
+      }
+      &_right{ 
+        align-items: flex-start;  
+        p{  
+          text-align: left;
+        }
+        @include md {
+          width: 100%;
+          max-width: 700px;
+        }
+      }
+    }
+  }
+  &_cont{
+    position: relative;
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    @include md {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &_left{
+      width: 100%;
+      max-width: 637px;
+      position: relative;
+      left: -90px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      @include l {
+        left: 0px;
+        padding-right: 15px;
+      }
+      @include md {
+        width: 100%;
+        max-width: 700px;
+        padding-right: 0px;
+      }
+      img{
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+    &_right{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 476px;
+      align-items: flex-end;
+      justify-content: center;
+      @include md {
+        width: 100%;
+        max-width: 700px;
+        align-items: flex-start;
+      }
+      h3{
+        margin: 0 0 40px;
+        color: $color-blue5;
+        strong{ 
+          font-weight: 700;
+          @include md {
+            font-weight: 500;
+          } 
+        }
+        @include md {
+          margin: 0 0 30px;
+          font-weight: 400;
+        }
+        @include xsl { 
+          font-size: 22px;
+          line-height: 28px;
+          margin: 0 0 10px;
+        }
+      }
+      h4{ 
+        font-size: 24px;
+        line-height: 31px;
+        color: $color-blue5;
+        font-weight: 500;
+        margin: 0 0 30px;
+        @include md {
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 26px;
+          margin: 0 0 20px;
+        }
+        @include xsl {
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 23px;
+          margin: 0 0 10px;
+        }
+      }
+      p{
+        color: $color-blue2;
+        font-family: $font-future;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 31px; 
+        text-align: right;
+        margin: 0;
+        @include md {
+          text-align: left;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 26px;
+        }
+        @include xsl {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 23px;
+        }
+      }
+    }
+  } 
+  &_partners{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    a{
+      text-decoration: none;
+      cursor: pointer;
+      margin: 20px 35px 0 0;
+      width: 75px;
+      img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      &:last-child{
+        margin: 20px 0px 0 0;
+      }
+    }
+  }
+  
+  .general_img{
+    object-fit: inherit; 
+  }
+
+}
