@@ -7,44 +7,55 @@ contentdir = "content"
 layoutdir = "layouts"
 paginatePath = "page"
 publishdir = "public"
-title = "Sea Life Rescue"
+title = "Taxi Invest"
 
 [Params]
 comments = true
 commit = false
-favicon = "img/svg/icon.svg"
-logo = "img/logo.svg"
-logo_mobail = "img/mobail/logo.svg"
+favicon = "img/favicon.png"
+logo = "img/logo.png" 
 rss = true
-description= "Sea Life Rescue"
-author = "Ken Maff"
+description= "Taxi Invest"
+author = "Lubomur"
 url = "https://sealiferescue.netlify.app/"
 
 [[menu.main]]
-name = "The Challenge"
-url = "/the-challenge/"
+name = "Про Нас"
+url = "/about/"
 weight = 1
+# [[menu.main]]
+# name = "Наша Робота"
+# url = "/work/"
+# weight = 2 
+# [[menu.main]]
+# name = "Відповідні Авто"
+# url = "/auto/"
+# weight = 3
 [[menu.main]]
-name = "Our Solution"
-url = "our-solution/"
-weight = 2 
-[[menu.main]]
-name = "Our Technology"
-url = "/our-technology/"
-weight = 3
-[[menu.main]]
-name = "Who We Are"
-url = "/who-we-are/"
+name = "Співпраця"
+url = "/aption/"
 weight = 4
+# [[menu.main]]
+# name = "Алгоритми Співпраці"
+# url = "/algorithms/"
+# weight = 5
 [[menu.main]]
-name = "Get Involved"
-url = "/get-involved/"
-weight = 5
+name = "Чому Саме Ми"
+url = "/why-we/"
+weight = 6
+[[menu.main]]
+name = "Запитання"
+url = "/faq/"
+weight = 7
+[[menu.main]]
+name = "Контакти"
+url = "/contact/"
+weight = 8
 
 
 
 [permalinks]
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "uk"
 metaDataFormat = "md"
 post = "/blog/:year/:month/:slug/"
 blog = "/blog/:year/:month/:day/:slug"

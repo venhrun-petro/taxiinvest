@@ -1,28 +1,29 @@
-<sections class="hero" id="hero">
-  <div class="container">
-    <div class="row">
-      <div class="hero_cont"> 
-        {{- with .Params.title -}}<h1>{{ . }}</h1>{{- end -}}
-        {{- with .Params.paragraph -}}<p class="general_paragraph">{{ . }}</p>{{- end -}}
-        {{- with .Params.button_link -}}<a class="general-button" href="{{ . }}">
-            <div class="general-button_img" 
-              style="-webkit-mask-image: url('../img/svg/paly.svg');
-                    mask-image: url('../img/svg/paly.svg');">
+<section class="hero">
+    <div class="container">
+         <div class="hero_cont">
+        
+            <h1>Taxi<span class="black">invest</span></h1>
+            <h3>Інвестиція в авто для роботи в Таксі дохідність від 40% річних</h3>
+            <div class="hero_btn"> 
+                <a class="general-button" href="#"> 
+                    <div class="general-button_img" style="-webkit-mask-image: url('../img/svg/heart.svg');
+                                mask-image: url('../img/svg/heart.svg');">
+                    </div>
+                    <span>Залишити заяву</span>
+                </a>
+                <a class="general-button" href="#about">
+                    <span>Про наc</span>
+                    <div class="general-button_img" style="-webkit-mask-image: url('../img/svg/arrow.svg');
+                                mask-image: url('../img/svg/arrow.svg');">
+                    </div>
+                </a>
             </div>
-          <span>Watch Video</span></a> 
-        {{- end -}} 
-          <img class="img-diver" src="{{ "img/Diver.webp" | absURL }}" data-srcset="{{ "img/Diver.webp" | absURL }}" alt="bg"/>
-        </div> 
-      </div>
+
+
+             
+        </div>
     </div>
-  </div>
-  {{- with .Params.video -}}
-    <div class="async-video" id="async-video" data-video="{{ . | absURL }}"></div>
-    <!-- <video class="bg-video" loop muted autoplay playsinline >
-      <source src="{{ . | absURL }}" type="video/mp4" poster="images/fish_poster.webp">
-    </video> -->
-  {{- end -}}
-  {{- with .Params.img -}}<img class="general_img" src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg"/>{{- end -}}
-  <img class="img-bottom" src="{{ "img/svg/white-circle.svg" | absURL }}" data-srcset="{{ "img/svg/white-circle.svg" | absURL }}" alt="bg"/>
-</sections>
- <h2 class="only-for-optimization"></h2>
+    <!-- {{- with .Params.img -}}{{- end -}} -->
+    
+    <img class="general_img lazy" data-src="{{ "img/clients.png" | absURL }}" data-srcset="{{ "img/clients.png" | absURL }}" alt="bg"/>
+</section>

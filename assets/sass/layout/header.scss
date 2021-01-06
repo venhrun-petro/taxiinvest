@@ -4,17 +4,21 @@
   top: 0;
   width: 100%;
   background: transparent;  
-  padding: 55px 0;
   z-index: 99;
   transition: 0.3s all;
   border-bottom: 1px solid rgba(6, 74, 130, 0.09);
   @include md {
-    padding: 30px 0 35px;
+    padding: 10px 0;
   }
   &.active { 
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
     background: $background-blue-gradient;
-    padding: 20px 0; 
+    
+    .header_cont{
+      padding: 15px 0 15px;
+    }
+
+    
     .header_cont_nav_list_items_link{
       padding: 17px 0;
     }
@@ -32,13 +36,16 @@
     justify-content: space-between;
     align-items: center;
     transition: 0.3s all; 
+    padding: 25px 0;
     &_logo {
       display: flex;
       flex-direction: row;
       align-items: center;
       text-decoration: none;
+      max-width: 150px;
       img {
         margin-right: 10px;
+        max-width: 100%;
       }
     }
     &_nav {
@@ -101,7 +108,7 @@
           list-style: none;
           padding: 0 0; 
           transition: 0.3s all;
-          margin-right: 30px;
+          margin-right: 25px;
           transition: 0.3s all;
           cursor: pointer;
           @include md {
@@ -110,9 +117,7 @@
             justify-content: center;
           }
           &:last-child{
-            @include md {
-              margin: 0 0 0px;
-            }
+            margin: 0 0 0px;
           }
           
           &:before{
@@ -253,4 +258,60 @@
       }
     }
   }
+}
+.social{
+  width: 100%;
+  display: flex; 
+  transition: 0.3s all;
+  &_cont{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 0;
+    transition: 0.3s all;
+    a{
+      cursor: pointer;
+      margin-right: 10px;
+      transition: 0.3s all;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover{
+        text-decoration: none; 
+        div{
+          background: #074F82;
+        }
+      }
+    }
+
+    
+  }
+  &_img{
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    background: $color-white;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    transition: 0.3s all;
+  }
+  &.active{
+    background: white;
+    .social_cont{
+      padding: 5px 0;
+    }
+    .social_img{
+      background: #074F82;
+    }
+  }
+  &.unactive{
+    .social_cont{
+      padding: 5px 0;
+    }
+    margin-top: -35px;
+  }
+  
 }

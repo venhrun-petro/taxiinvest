@@ -1,12 +1,43 @@
 <header class="header">
+  <div class="social">
+    <div class="container">
+      <div class="social_cont">
+          <a class="social_link" href="#">
+            <div class="social_img"
+            style="-webkit-mask-image: url('../img/svg/facebook.svg');
+                        mask-image: url('../img/svg/facebook.svg');"
+            ></div>
+            <!-- <img src="{{ "img/svg/facebook.svg" | absURL }}" alt="linkedin"> -->
+          </a>
+          <a class="social_link" href="#">
+            <div class="social_img"
+            style="-webkit-mask-image: url('../img/svg/instagram.svg');
+                        mask-image: url('../img/svg/instagram.svg');"
+            ></div>
+            <!-- <img src="{{ "img/svg/instagram.svg" | absURL }}" alt="linkedin"> -->
+          </a>
+          <a class="social_link" href="#">
+            <div class="social_img"
+            style="-webkit-mask-image: url('../img/svg/linkedin.svg');
+                        mask-image: url('../img/svg/linkedin.svg');"
+            ></div>
+            <!-- <img src="{{ "img/svg/linkedin.svg" | absURL }}" alt="linkedin"> -->
+          </a>
+          <a class="social_link" href="#">
+            <div class="social_img"
+            style="-webkit-mask-image: url('../img/svg/twitter.svg');
+                        mask-image: url('../img/svg/twitter.svg');"
+            ></div>
+            <!-- <img src="{{ "img/svg/twitter.svg" | absURL }}" alt="linkedin"> -->
+          </a>
+      </div>
+    </div>
+  </div>
   <div class="container"> 
     <div class="header_cont">
       {{ if isset .Site.Params "logo" }}
       <a class="header_cont_logo" href="{{ .Site.BaseURL }}" >
-        <picture>
-          <source class="avatar-img" media="(max-width:650px)" srcset="{{ .Site.Params.logo_mobail | absURL }}"> 
-          <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="Flowers" >
-        </picture> 
+        <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="Flowers" >
       </a>
       {{ end }} 
       {{ $url := .RelPermalink }}
@@ -34,14 +65,7 @@
             {{ end }}
           </li>
           {{ end }}
-        </ul>
-        <a class="general-button" href="#">
-          <div class="general-button_img" 
-              style="-webkit-mask-image: url('../img/svg/heart.svg');
-                    mask-image: url('../img/svg/heart.svg');">
-          </div>
-          <span>Donate</span>
-        </a> 
+        </ul> 
       </nav>
       <div class="hamburger hamburger--slider js-hamburger">
       <div class="hamburger-box">
