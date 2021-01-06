@@ -45,7 +45,7 @@ url = "/why-we/"
 weight = 6
 [[menu.main]]
 name = "Запитання"
-url = "/faq/"
+url = "#faq"
 weight = 7
 [[menu.main]]
 name = "Контакти"
