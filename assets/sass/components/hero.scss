@@ -286,6 +286,7 @@
   display: flex;
   flex-direction: column;
   padding: 70px 0;
+  background-color: #F7F9FC;
   h3{
     text-align: center;
   }
@@ -333,4 +334,218 @@
       max-height: 100%;
     }
   }
+}
+
+.variant{
+  .about_cont{
+    flex-direction: row-reverse;
+  }
+  .about_content{
+    padding-right: 0;
+    padding-left: 30px;
+  }
+}
+.aption{
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0;
+  background-color: #F7F9FC;
+  h3{
+    text-align: center;
+  }
+  &_cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin: 50px auto 0;
+    width: 100%; 
+  }
+  &_items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: drop-shadow(0px 2px 10px rgba(92,174,255,0.17));
+    background-color: #fff;
+    padding: 30px 20px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px; 
+    box-shadow: 0px 8px 10px rgba(92,174,255,0.17);
+    border-radius: 10px;
+    margin: 0 15px 30px;  
+  }
+  &_img{
+    margin: 0 auto 30px;
+    width: 100%;
+    max-width: 140px;
+    img{
+      max-width: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  p{
+    font-family: $font-future;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px; 
+    color: $color-blue4;
+    margin: 0 auto 30px;
+    text-align: justify;
+    & *{
+      font-size: inherit;
+      line-height: inherit; 
+      text-decoration: none;
+    }
+  }
+  &_btn{
+    display: flex;
+    justify-content: center;
+    background: #1D5697;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: auto 0 0;
+    font-family: "Futura PT",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 126.5%;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #1D5697;
+    text-decoration: none;
+    transition: 0.3s all;
+    &:hover{
+      background: white;
+      color: #1D5697;
+      cursor: pointer;
+    }
+  }
+}
+.why-we{
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0;
+  background-color: #F7F9FC;
+  h3{
+    text-align: center;
+  }
+  &_cont{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 760px;
+  }
+  &_items{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 0 30px;
+    &:last-child{
+      margin: 0 0 0;
+    }
+  }
+  &_number{
+    min-width: 55px;
+    margin: 0 30px 0 0;
+    line-height: 55px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: $font-future;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px; 
+    color: $color-white; 
+    background-color: $color-blue4;
+    & *{
+      font-size: inherit;
+      line-height: inherit; 
+      text-decoration: none;
+    }
+  }
+  &_text{
+    font-family: $font-future;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px; 
+    color: $color-black;
+    margin: 13px auto 0;
+    & *{
+      font-size: inherit;
+      line-height: inherit; 
+      text-decoration: none;
+    }
+  }
+}
+
+
+.algoritm{
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0; 
+  h3{
+    text-align: center;
+  }
+  &_cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 760px;
+  }
+  &_items{
+    display: flex;
+    flex-direction: row;
+    width: calc(50% - 30px);
+    margin: 20px 15px;
+    border: 2px solid #1D5697;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    align-items: flex-start;
+    img{
+      margin-right: 20px;
+      margin-top: 7px;
+    }
+  }
+  p{
+    font-family: $font-future;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px; 
+    color: $color-black;
+    margin: 0 auto;
+    & *{
+      font-size: inherit;
+      line-height: inherit; 
+      text-decoration: none;
+    }
+  }
+  &_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0; 
+  h3{
+    text-align: center;
+  }
+
+
 }

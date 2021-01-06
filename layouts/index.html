@@ -73,6 +73,105 @@
         </div>
       </div>
   </section>
+  <section class="variant about" id="variant">
+    <div class="container"> 
+          <h3>З якими автомобілями працюємо</h3>
+          <div class="about_cont">
+              <div class="about_content">
+                  <div class="about_info">
+                    <p>На сьогоднішній день працюємо з двома типами авто: Renault/Dacia Logan та Sandero, що відповідають чітким критеріям відбору та молодші 2013р.в.</p>
+                  </div>
+                  <div class="about_info">
+                    <p>Стосовно співпраці з іншими марками авто можливе індивідуальне обговорення.</p>
+                  </div> 
+              </div>
+              <div class="about_img">
+                <img class="lazy" data-src="{{ "img/about.jpg" | absURL }}" data-srcset="{{ "img/about.jpg" | absURL }}" alt="about"/> 
+              </div>
+          </div> 
+      </div>
+  </section>
+
+  <section class="aption" id="aption">
+    <div class="container"> 
+          <h3>Варіанти співпраці</h3>
+          <div class="aption_cont">
+              <div class="aption_items">
+                <div class="aption_img">
+                  <img class=" lazy" data-src="{{ "img/svg/sedan-car-front.svg" | absURL }}" data-srcset="{{ "img/svg/sedan-car-front.svg" | absURL }}" alt="about"/> 
+                </div>
+                <p>Передаєте нам автомобіль в управління для роботи «на лінії» (авто перебуває у вашій власності).</p>
+                <a class="aption_btn" href="#contact">Звязатись</a>
+              </div> 
+              <div class="aption_items">
+                <div class="aption_img">
+                  <img class=" lazy" data-src="{{ "img/svg/money-bag.svg" | absURL }}" data-srcset="{{ "img/svg/money-bag.svg" | absURL }}" alt="about"/> 
+                </div>
+                <p>Передаєте нам кошти під 18% річних в валюті або 24% річних в гривні.</p>
+                <a class="aption_btn" href="#contact">Звязатись</a>
+              </div> 
+
+          </div> 
+      </div>
+  </section>
+
+  <section class="algoritm" id="algoritm">
+    <div class="container"> 
+          <h3>Алгоритм співпраці</h3>
+            <div class="algoritm_cont">
+              <div class="row"> 
+                <div class="algoritm_row">
+                  <div class="algoritm_items">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Зв’язатися з нами зручним для вас способом.</p>
+                  </div>
+                  <div class="algoritm_items">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Обговорюємо деталі інвестиції, підбираємо варіант співпраці та укладаємо угоду.</p>
+                  </div>
+                  <div class="algoritm_items">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Підготовка авто до виходу «на лінію».</p>
+                  </div>
+                  <div class="algoritm_items">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Щотижневе отримання пасивного доходу, звітність та контроль.</p>
+                  </div>
+               </div>
+            </div> 
+          </div>
+      </div>
+  </section>
+
+  <section class="why-we" id="why-we">
+    <div class="container"> 
+          <h3>Чому варто співпрацювати з нами</h3>
+          <div class="why-we_cont">
+              <div class="why-we_items">
+                  <p class="why-we_number">1</p>
+                  <p class="why-we_text">Маємо досвід управління власним автопарком.</p>
+              </div>
+              <div class="why-we_items">
+                  <p class="why-we_number">2</p>
+                  <p class="why-we_text">Автомобіль залишається вашою власністю протягом всього часу співпраці.</p>
+              </div>
+              <div class="why-we_items">
+                  <p class="why-we_number">3</p>
+                  <p class="why-we_text">Допомагаємо з купівлею та продажем автомобіля.</p>
+              </div>
+              <div class="why-we_items">
+                  <p class="why-we_number">4</p>
+                  <p class="why-we_text">Беремо на себе контроль за всіма процесами та надаємо вам повну звітність.</p>
+              </div>
+              <div class="why-we_items">
+                  <p class="why-we_number">5</p>
+                  <p class="why-we_text">Здійснюємо щотижневу виплату пасивного доходу.</p>
+              </div> 
+          </div> 
+      </div>
+  </section>
+
+
   <section class="product" id="faq">
     <div class="container">
       <div class="row">
@@ -85,11 +184,15 @@
                         {{ .answer | markdownify }}
                     </div> 
                 </div> 
-            {{ end }}
-
+            {{ end }} 
         </div>
       </div>
     </div>
     <img class="general_img lazy" data-src="{{ "img/features.jpg" | absURL }}" data-srcset="{{ "img/features.jpg" | absURL }}" alt="bg"/>
+  </section>
+  <section class="contact" id="contact">
+    <div class="container"> 
+        <h3>Контакт</h3> 
+    </div>
   </section>
 {{ end }}
