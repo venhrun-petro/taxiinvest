@@ -17,11 +17,11 @@ logo = "img/logo.png"
 rss = true
 description= "Taxi Invest"
 author = "Lubomur"
-url = "https://sealiferescue.netlify.app/"
+url = "https://taxiinvest.netlify.app/"
 
 [[menu.main]]
 name = "Про Нас"
-url = "/about/"
+url = "#about"
 weight = 1
 # [[menu.main]]
 # name = "Наша Робота"
@@ -33,7 +33,7 @@ weight = 1
 # weight = 3
 [[menu.main]]
 name = "Співпраця"
-url = "/aption/"
+url = "#aption"
 weight = 4
 # [[menu.main]]
 # name = "Алгоритми Співпраці"
@@ -41,7 +41,7 @@ weight = 4
 # weight = 5
 [[menu.main]]
 name = "Чому Саме Ми"
-url = "/why-we/"
+url = "#why-we"
 weight = 6
 [[menu.main]]
 name = "Запитання"
@@ -49,7 +49,7 @@ url = "#faq"
 weight = 7
 [[menu.main]]
 name = "Контакти"
-url = "/contact/"
+url = "#contact"
 weight = 8
 
 

@@ -1,5 +1,78 @@
 {{ define "main" }} 
   {{  partial "blocks/hero.html" . }}
+  <section class="about" id="about">
+    <div class="container"> 
+          <h3>Про нас</h3>
+          <div class="about_cont">
+              <div class="about_content">
+                  <div class="about_info">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Ми, команда практиків, яка на ринку таксі працює понад три роки. Спираючись на досвід створення і організацію власного автопарку, та його співпрацю з платформами Bolt та Uber, ми почали залучати кошти інвесторів. В управлінні компанії перебуває понад 20 автомобілів.</p>
+                  </div>
+                  <div class="about_info">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Ми самі розробили унікальну програму по інвестуванню та досконало налагодили процес від залучення інвестицій до отримання інвестором пасивного доходу.</p>
+                  </div>
+                  <div class="about_info">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Наша місія – забезпечити високий стабільний пасивний дохід кожного інвестора.</p>
+                  </div>
+                  <div class="about_info">
+                    <img class="lazy" data-src="{{ "img/svg/arrow.svg" | absURL }}" data-srcset="{{ "img/svg/arrow.svg" | absURL }}" alt="arrow"/> 
+                    <p>Наша мета на 2021 рік – збільшити кількість транспорту, що перебуває в управлінні компанії, до 100 автомобілів.
+                    </p>
+                  </div>
+              </div>
+              <div class="about_img">
+                <img class="lazy" data-src="{{ "img/about.jpg" | absURL }}" data-srcset="{{ "img/about.jpg" | absURL }}" alt="about"/> 
+              </div>
+          </div> 
+      </div>
+  </section>
+  <section class="work" >
+    <div class="container">
+      <div class="row">
+          <h3>Наша робота</h3>
+          <div class="work_cont"> 
+              <div class="work_items">
+                <div class="work_icon"><img class="lazy" data-src="{{ "img/svg/sedan-car-front.svg" | absURL }}" data-srcset="{{ "img/svg/sedan-car-front.svg" | absURL }}" alt="arrow"/> 
+                </div>
+                <p>Допомога в пошуку та придбанні авто.</p>
+              </div> 
+              <div class="work_items">
+                <div class="work_icon"><img class="lazy" data-src="{{ "img/svg/car.svg" | absURL }}" data-srcset="{{ "img/svg/car.svg" | absURL }}" alt="arrow"/> 
+                </div>
+                <p>Підготовка авто до роботи.</p>
+              </div>
+              <div class="work_items">
+                <div class="work_icon"><img class="lazy" data-src="{{ "img/svg/driver.svg" | absURL }}" data-srcset="{{ "img/svg/driver.svg" | absURL }}" alt="arrow"/> 
+                </div>
+                <p>Підбір водія.</p>
+              </div>
+              <div class="work_items">
+                <div class="work_icon"><img class="lazy" data-src="{{ "img/svg/piston.svg" | absURL }}" data-srcset="{{ "img/svg/piston.svg" | absURL }}" alt="arrow"/> 
+                </div>
+                <p>Контроль технічного стану авто під час співпраці.</p>
+              </div>
+              <div class="work_items">
+                <div class="work_icon"><img class="lazy" data-src="{{ "img/svg/placeholder.svg" | absURL }}" data-srcset="{{ "img/svg/placeholder.svg" | absURL }}" alt="arrow"/> 
+                 </div>
+                <p>Контроль роботи водія та спостереження за маршрутами з допомогою GPS приладу.</p>
+              </div>
+              <div class="work_items">
+                <div class="work_icon"><img class="lazy" data-src="{{ "img/svg/document.svg" | absURL }}" data-srcset="{{ "img/svg/document.svg" | absURL }}" alt="arrow"/> 
+                </div>
+                <p>Надання інвестору доступу до всіх операційних показників.</p>
+              </div>
+              <div class="work_items">
+                <div class="work_icon"><img class="lazy" data-src="{{ "img/svg/save-money.svg" | absURL }}" data-srcset="{{ "img/svg/save-money.svg" | absURL }}" alt="arrow"/> 
+                </div>
+                <p>Нарахування та виплата пасивного доходу.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+  </section>
   <section class="product" id="faq">
     <div class="container">
       <div class="row">

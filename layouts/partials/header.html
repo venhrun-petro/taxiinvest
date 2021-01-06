@@ -41,6 +41,7 @@
       </a>
       {{ end }} 
       {{ $url := .RelPermalink }}
+      {{ $link := .Site.BaseURL }}
       <nav class="header_cont_nav">
         <ul class="header_cont_nav_list">
           {{ range .Site.Menus.main.ByWeight }}
@@ -52,7 +53,7 @@
           {{ end }}
           "> 
             <a class="header_cont_nav_list_items_link"
-              href="{{ if.URL }}{{ .URL | relLangURL }}{{ end }}">{{ .Name }}
+              href="{{$link}}{{ if.URL }}{{ .URL }}{{ end }}">{{ .Name }}
             </a>
             {{ if .HasChildren }}
             <div class="header_cont_nav_list_items_children"> 
