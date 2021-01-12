@@ -285,7 +285,9 @@
     img{
       object-fit: cover;
       object-position: center;
-      max-width: 100%;
+      @include md {
+        max-width: 100%;
+      } 
     }
   }
 }
@@ -610,20 +612,9 @@
   h3{
     text-align: center;
   }
-
-
+ 
 }
-
-
-
-
-
-
-
-
-
-
-
+  
 .content {
   display: flex;
   flex-direction: column;
