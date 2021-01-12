@@ -1,7 +1,7 @@
 var element = document.querySelector("header");
  
 function myscroll() {  
-  if (window.pageYOffset > 50) {
+  if (window.pageYOffset > 10) {
     element.classList.add("active"); 
   } else{
     element.classList.remove("active"); 

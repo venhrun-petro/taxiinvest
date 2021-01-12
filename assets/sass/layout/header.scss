@@ -8,7 +8,7 @@
   transition: 0.3s all;
   border-bottom: 1px solid rgba(6, 74, 130, 0.09);
   @include md {
-    padding: 10px 0;
+     
   }
   &.active { 
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
@@ -23,6 +23,9 @@
       padding: 17px 0;
     }
     .header_cont_nav_list{
+      @include md {
+        padding: 90px 20px 10px;
+      }
       &:after{
         @include md {
           top: 32px;
@@ -46,6 +49,10 @@
       img {
         margin-right: 10px;
         max-width: 100%;
+        @include sm {
+          max-width: 110px;
+          width: 100%;
+        }
       }
     }
     &_nav {
@@ -72,9 +79,10 @@
           flex-direction: column; 
           transform: translate(100%, 0);
           z-index: 8;
-          padding: 90px 20px 10px;
+          padding: 140px 20px 10px;
           border-bottom-left-radius: 30px;
         }
+        
         &.active {
           transition: 0.3s all;
           @include md {
@@ -86,7 +94,7 @@
              content: 'MENU';
              position: absolute;
              left: 24px;
-             top: 40px;
+             top: 100px;
              z-index: 9;
              font-family: $font-future;
              font-style: normal;
@@ -96,10 +104,10 @@
              text-transform: uppercase; 
              color: $color-white;
              transition: 0.3s all;
-          }
+          } 
         }
-        @include sm {
-          max-width: 240px;
+        @include xsl {
+          max-width: 100%;
         }
         &_items {
           display: flex;
@@ -312,6 +320,9 @@
       padding: 5px 0;
     }
     margin-top: -35px;
+    @include md {
+      // margin-top: -20px;
+    }
   }
   
 }

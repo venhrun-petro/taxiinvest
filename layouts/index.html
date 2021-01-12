@@ -173,26 +173,24 @@
 
 
   <section class="product" id="faq">
-    <div class="container">
-      <div class="row">
+    <div class="container"> 
         <div class="faq_cont">
-            {{ range .Params.faq }}
-                <div class="faq_item">
-                    <h4 class="faq_item_title">{{ .title }}
-                      <img class="faq_item_img lazy" data-src="{{ "img/arrow.svg" | absURL }}" data-srcset="{{ "img/arrow.svg" | absURL }}" alt="arrow"/></h4> 
-                    <div class="faq_item_content post_content"> 
-                        {{ .answer | markdownify }}
-                    </div> 
-                </div> 
-            {{ end }} 
-        </div>
-      </div>
+          {{ range .Params.faq }}
+              <div class="faq_item">
+                  <h4 class="faq_item_title">{{ .title }}
+                    <img class="faq_item_img lazy" data-src="{{ "img/arrow.svg" | absURL }}" data-srcset="{{ "img/arrow.svg" | absURL }}" alt="arrow"/></h4> 
+                  <div class="faq_item_content post_content"> 
+                      {{ .answer | markdownify }}
+                  </div> 
+              </div> 
+          {{ end }} 
+        </div> 
     </div>
     <img class="general_img lazy" data-src="{{ "img/features.jpg" | absURL }}" data-srcset="{{ "img/features.jpg" | absURL }}" alt="bg"/>
   </section>
   <section class="contact" id="contact">
     <div class="container"> 
-        <h3>Контакт</h3> 
+        <h3>Контакт</h3>
     </div>
   </section>
 {{ end }}

@@ -35,6 +35,10 @@ h3{
   line-height: 46px; 
   color: $color-blue4;
   margin: 0 auto;
+  @include xsl{ 
+    font-size: 26px;
+    line-height: 30px; 
+  }
   & *{
     font-size: inherit;
     line-height: inherit; 
