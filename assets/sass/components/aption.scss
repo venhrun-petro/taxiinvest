@@ -1,0 +1,26 @@
+
+.aption_btn{
+    display: flex;
+    justify-content: center; 
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: auto 0 0;
+    font-family: "Futura PT",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 126.5%;
+    color: #ffffff;
+    background-color: #0ae88d;
+    text-align: center;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    transition: 0.3s all;
+    &:hover{
+      color: $color-green;
+      border: 2px solid $color-green;
+      background:  $background-white;  
+      cursor: pointer;
+    }
+  }

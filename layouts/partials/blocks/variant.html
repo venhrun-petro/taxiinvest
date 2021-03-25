@@ -1,0 +1,23 @@
+ <section class="variant about" id="variant">
+    <div class="container"> 
+        {{ with .Params.variant_title }}<h3>{{ . }}</h3>{{ end }}
+        <div class="about_cont">
+            <div class="about_content">
+            {{ with .Params.variant_text_list }}
+                {{ range . }}
+                    <div class="about_info">
+                        <img class="lazy" data-src="{{ "img/arrow-left.svg" | absURL }}" data-srcset="{{ "img/arrow-left.svg" | absURL }}" alt="arrow"/> 
+                        <p>{{ .text }}</p>
+                    </div>
+                {{ end }}
+            {{ end }} 
+            </div>
+            {{ with .Params.variant_img }}
+            <div class="about_img">
+            <img class="lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="about"/> 
+            </div>
+            {{ end }} 
+        </div> 
+    </div>
+</section>
+ 

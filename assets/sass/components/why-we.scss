@@ -1,0 +1,80 @@
+
+.why-we{
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0;
+    background-color: #F7F9FC;
+    @include xsl {
+      padding: 40px 0;
+    }
+    h3{
+      text-align: center;
+    }
+    &_cont{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap; 
+      align-items: flex-start;
+      margin: 50px auto 0;
+      width: 100%;
+      max-width: 760px;
+      @include xsl {
+        margin: 30px auto 0;
+      }
+    }
+    &_items{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin: 0 0 30px;
+      &:last-child{
+        margin: 0 0 0;
+      }
+      @include xsl {
+        margin: 0 0 25px;
+      }
+    }
+    &_number{
+      min-width: 55px;
+      margin: 0 30px 0 0;
+      line-height: 55px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: $font-future;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px; 
+      color: $color-white; 
+      background-color: $color-green;
+      @include xsl {
+        line-height: 45px;
+        min-width: 45px;
+        font-size: 26px;
+      }
+      & *{
+        font-size: inherit;
+        line-height: inherit; 
+        text-decoration: none;
+      }
+    }
+    &_text{
+      font-family: $font-future;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 31px; 
+      color: $color-black;
+      margin: 13px auto 0;
+      @include xsl {
+        font-size: 19px;
+        line-height: 24px;
+        margin: 1px auto 0;
+      }
+      & *{
+        font-size: inherit;
+        line-height: inherit; 
+        text-decoration: none;
+      }
+    }
+  }

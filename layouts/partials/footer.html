@@ -2,14 +2,16 @@
 <div class="footer_bottom">
   <div class="container">  
     <div class="footer_bottom_cont">
-        <p>&copy; {{ now.Format "2006"}}, Taxiinvest. All rights reserved </p>   
+        <p>&copy; {{ now.Format "2006"}}, InvestTaxi. All rights reserved </p>   
         <div class="footer_bottom_info">
-          <a href="#">info@sealiferescue.org</a>
+          <a href="mailto:{{ .Site.Data.general.email }}">{{ .Site.Data.general.email }}</a>
           <p>&nbsp; - &nbsp;</p>
-          <a href="#">+1 (954) 376 1743​</a>
+          <a href="tel:{{ .Site.Data.general.phone_number }}​">{{ .Site.Data.general.phone_number }}​</a>
         </div>
+        <a href="/contract">Договора</a>
         <a href="/privacy-policy">Privacy Policy</a>
     </div> 
   </div> 
 </div>
 {{ partial "javascript.html" . }}
+{{ partial "site-scripts.html" . }}

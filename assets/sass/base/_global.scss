@@ -17,7 +17,9 @@ body {
 
  
 .main{
-    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .general_img{
@@ -52,81 +54,46 @@ body {
   }
 }
 .general-button {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: $background-white;
-  font-family: $font-future;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px; 
+  display: inline-block;
+  min-width: 285px;
+  padding: 20px;
+   
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
   text-align: center;
-  color: $color-blue;
+  font-weight: bold;
+   
   cursor: pointer;
   transition: 0.3s all;
-  border-radius: 20px; 
-  box-sizing: border-box; 
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
   text-decoration: none;
-  justify-content: center;
+  color: $color-green;
+  background:  $background-white;  
   &_img{
     margin-right: 15px;
     width: 18px;
     height: 18px;
-    background: $color-blue;
+    background: $color-green;
     mask-repeat: no-repeat;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
     transition: 0.3s all;
   }
-  &:hover {
-    color: $background-white;
-    background: $background-blue-gradient;
-    box-shadow: 0 4px 2px -2px $color-blue;
+  &:hover { 
+    color: #ffffff;
+    background-color: #0ae88d;
     & > .general-button_img{
       background-color: $background-white;
     }
   }
 }
 
-
-.btn-read{
-  display: flex;
-  align-items: center;
-  flex-shrink: 2;
-  padding: 10px 20px;
-  background-color: $background-white;
-  font-family: $font-future;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px; 
-  text-align: center;
-  color: $color-blue;
-  cursor: pointer;
-  transition: 0.3s all;
-  border-radius: 20px; 
-  box-sizing: border-box; 
-  text-decoration: none; 
-  &_img{
-    margin-left: 10px;
-    width: 9px;
-    height: 14px;
-    background: $color-blue;
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    transition: 0.3s all;
-  }
-  &:hover {
-    color: $background-white;
-    background: $background-blue-gradient;
-    box-shadow: 0 4px 2px -2px $color-blue;
-    & > .btn-read_img{
-      margin-left: 15px;
-      background-color: $background-white;
-    }
-  }
+.only-for-optimization, .only-optimazy{
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
 }

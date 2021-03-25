@@ -5,7 +5,7 @@ h1{
   font-weight: 800;
   font-size: 48px;
   line-height: 62px; 
-  color: $color-blue4;
+  color: $color-green;
   margin: 0 auto;
   & *{
     font-size: inherit;
@@ -19,7 +19,7 @@ h2{
   font-weight: 800;
   font-size: 48px;
   line-height: 62px; 
-  color: $color-blue4;
+  color: $color-green;
   margin: 0 auto;
   & *{
     font-size: inherit;
@@ -33,7 +33,7 @@ h3{
   font-weight: 500;
   font-size: 36px;
   line-height: 46px; 
-  color: $color-blue4;
+  color: $color-green;
   margin: 0 auto;
   @include xsl{ 
     font-size: 26px;
@@ -49,9 +49,9 @@ h4{
   font-family: $font-future;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 46px;
-  color: $color-blue4;
+  font-size: 28px;
+  line-height: 32px;
+  color: $color-green;
   margin: 0 auto;
   & *{
     font-size: inherit;
@@ -65,7 +65,7 @@ h5{
   font-weight: 800;
   font-size: 24px;
   line-height: 31px; 
-  color: $color-blue4;
+  color: $color-green;
   margin: 0 auto;
   & *{
     font-size: inherit;
@@ -80,7 +80,7 @@ h5{
   font-weight: normal;
   font-size: 24px;
   line-height: 31px; 
-  color: $color-blue4;
+  color: $color-green;
   margin: 0 auto;
   & *{
     font-size: inherit;

@@ -1,0 +1,22 @@
+title: Invest Taxi
+description: Invest Taxi
+author: Lubomur
+social:
+  - img: img/facebook.svg
+    link: https://www.facebook.com/InvestTaxi-102935801850469/?ref=page_internal
+logo: img/logo.png
+menu:
+  - name: Про Нас
+    url: "#about"
+  - name: Співпраця
+    url: "#aption"
+  - name: Чому Саме Ми
+    url: "#why-we"
+  - name: Запитання
+    url: "#faq"
+  - name: Контактна форма
+    url: "#contact"
+  - name: Контакти
+    url: /contact
+email: info@investtaxi.info
+phone_number: +380 73 021 21 21

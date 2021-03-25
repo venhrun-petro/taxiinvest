@@ -1,0 +1,16 @@
+<section class="why-we" id="why-we">
+    <div class="container">  
+        {{ with .Params.why_we_title }}<h3>{{ . }}</h3>{{ end }}
+        {{ with .Params.why_we_list }}
+            <div class="why-we_cont">
+                {{ range . }}
+                    <div class="why-we_items">
+                        <p class="why-we_number">{{ .number }}</p>
+                        <p class="why-we_text">{{ .text }}</p>
+                    </div>
+                {{ end }} 
+            </div> 
+        {{ end }}
+    </div>
+</section>
+ 

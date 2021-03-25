@@ -1,0 +1,21 @@
+<section class="team" id="team">
+    <div class="container">  
+        {{ with .Params.team_title }}<h3>{{ . }}</h3>{{ end }}
+        {{ with .Params.team_list }}
+        <div class="team_cont">
+            {{ range . }}
+                <div class="team_cont_items">
+                    <div class="team_cont_items_img"> 
+                        <img class="lazy" data-src="{{ .img | absURL }}" data-srcset="{{ .img | absURL }}" alt="arrow"/>
+                    </div>
+                    <h4>{{ .name }}</h4>
+                    <p>{{ .text }}</p>
+                </div>
+            {{ end }} 
+        </div>
+        {{ end }}
+    </div>
+    {{ with .Params.team_img }}<img class="general_img lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg"/>{{ end }}
+</section>
+
+ 

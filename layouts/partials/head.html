@@ -1,6 +1,6 @@
 <head>
-  {{ $title := print .Title " · " .Site.Title }}
-  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+  {{ $title := print .Site.Data.general.title " | " .Params.Title }}
+  {{ if .IsHome }}{{ $title = .Params.Title }}{{ end }}
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -8,8 +8,8 @@
   <meta property="og:title" content="{{ $title }}" />
   <meta name="twitter:title" content="{{ $title | truncate 70 }}" />
 
-  {{ $description := print .Params.description " · " .Site.Params.description }}
-  {{ if .IsHome }}{{ $description = .Site.Params.description }}{{ end }}
+  {{ $description := print .Site.Data.general.description " | " .Params.description }}
+  {{ if .IsHome }}{{ $description = .Params.description }}{{ end }}
   <meta name="description" content="{{ $description }}">
   <meta property="og:description" content="{{ $description }}">
   <meta name="twitter:description" content="{{ $description }}">
@@ -17,17 +17,17 @@
   <meta name="HandheldFriendly" content="True" />
 
 
-  <meta name="author" content="{{ .Site.Params.author }}"/>
+  <meta name="author" content="{{ .Site.Data.general.author }}"/>
   {{- with .Site.Params.favicon }}
     <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
   {{- end -}} 
  
-  {{- with .Params.share_img | default .Params.image | default .Site.Params.logo }}
+  {{- with .Params.share_img | default .Params.image | default .Site.Data.general.logo }}
     <meta property="og:image" content="{{ . | absURL }}" />
     <meta name="twitter:image" content="{{ . | absURL }}" />
   {{- end }}
   <meta name="twitter:card" content="summary" />
-  {{- with .Site.Params.author }}
+  {{- with .Site.Data.general.author }}
     <meta name="twitter:site" content="@{{ . }}" />
     <meta name="twitter:creator" content="@{{ . }}" />
   {{- end }}
@@ -38,7 +38,7 @@
   <meta property="og:url" content="{{ .Site.Params.url }}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ $title }}" />
-     
+  <meta name="google-site-verification" content="hVkbQz75a6e8__c1bHnm1J38ZpMrS8Frt7vvcK49qZM">
   {{ .Hugo.Generator -}}
 
   <link rel="canonical" href="{{ .Site.Params.url }}" /> 

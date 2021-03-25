@@ -1,0 +1,21 @@
+<section class="aption" id="aption">
+    <div class="container"> 
+        {{ with .Params.aption_title }}<h3>{{ . }}</h3>{{ end }} 
+        {{ with .Params.aption_list }}
+          <div class="aption_cont">
+            {{ range . }}
+              <div class="aption_items">
+                <div class="aption_img">
+                  <img class=" lazy" data-src="{{ .img | absURL }}" data-srcset="{{ .img | absURL }}" alt="about"/> 
+                </div>
+                <p>{{ .text }}</p>
+                <a class="aption_btn" href="#contact">Звязатись</a>
+              </div> 
+            {{ end }}   
+          </div> 
+        {{ end }}
+      </div>
+  </section>
+
+ 
+ 

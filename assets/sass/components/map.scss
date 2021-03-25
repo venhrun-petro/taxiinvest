@@ -1,0 +1,100 @@
+
+.map{
+    display: flex;
+    flex-direction: column;
+    padding: 270px 0 70px;
+    @include xsl {
+      padding: 210px 0 50px;
+    }
+    h3{
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 100%;
+        max-width: 320px;
+        height: 2px;
+        background-color: $color-green;
+        border-radius: 3px;
+        transform: translateX(-50%);
+      }
+    }
+    &_paragraph{ 
+      margin: 25px auto 30px!important; 
+      font-size: 22px!important;
+      line-height: 26px!important; 
+      color: $color-black!important;
+      max-width: 820px;
+      @include sm {
+        width: 100%;
+        max-width: 520px;
+      }
+    }
+    p, a{
+      font-family: $font-future;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px; 
+      color: $color-gray2; 
+      text-align: center;
+      & *{
+        font-size: inherit;
+        line-height: inherit; 
+        text-decoration: none;
+      }
+    } 
+
+    &_cont{
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      @include sm {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &_list{
+      padding-top: 10px;
+      width: calc(40% - 30px);
+      padding-right: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border: 2px solid #0AE88D;
+      border-radius: 5px;
+      padding: 30px 25px;
+      @include sm {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto 30px;
+      }
+      h4{
+        text-align: left;
+        margin: 0 0 10px;
+      }
+      p{
+        margin: 0 0 25px;
+      }
+      a{
+        &:hover{
+          color: $color-green;
+        }
+      }
+    }
+     
+    &_right{
+      width: 60%;
+      height: 450px;
+      @include sm {
+        width: 100%;
+      }
+    }
+  }

@@ -1,295 +1,8 @@
-.footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%; 
-  position: relative; 
-  overflow: hidden;
-  z-index: 4; 
-  padding: 310px 0 0;
-  @include sm {
-    padding: 230px 0 0;
-  }
-  .general_img{
-    object-fit: cover;
-    object-position: top center;
-    @include md {
-      object-position: top left;
-    }
-    @include sm {
-      object-position: 0 15px;
-    }
-  }
-  &_logo{    
-    display: block;
-    position: relative;
-    z-index: 9;
-    width: 100%;
-    max-width: 195px;
-    height: auto;
-    img{ 
-      max-width: 100%;
-    }
-  }
-  &_cont{
-    position: relative;
-    z-index: 9;
-    display: flex;
-    flex-direction: column; 
-    padding: 0 0 67px;  
-  }
-  &_info{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    @include sm { 
-      flex-direction: column;
-    }
-    &_list{
-      display: flex;
-      flex-direction: column;
-      margin: 30px 115px 0 15px;
-      @include sm {
-        margin: 30px 0 0 0px; 
-      }
-      &_list:last-child{
-        margin: 30px 15px 0 15px;
-      }
-      h3{
-        font-family: $font-future;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 38px; 
-        color: $color-white;
-        margin: 0 0 20px;
-        @include sm {
-          margin: 0 0 0px;
-        }
-      }
-      form{
-        display: flex;
-        flex-direction: column;
-        width: 445px;  
-        margin: 0;
-        padding: 0;
-        position: relative;  
-          
-        @include sm {
-          width: 100%;
-          max-width: 445px;  
-          margin-top: 20px;
-        }
-        label{
-          position: relative;
-          width: 100%;
-          height: 43px;
-          border-radius: 20px;
-          overflow: hidden;
-          span{
-            font-size: 12px;
-            color: transparent;
-          }
-        }
-        input{
-          background: #FFFFFF;
-          border-radius: 20px;
-          width: 100%;
-          overflow: hidden;
-          padding: 10px 20px;
-          font-family: $font-future;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 23px; 
-          color: $color-blue2;
-          transition: 0.3s all;
-          box-sizing: border-box;  
-          border: none;
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
-          width: 100%;
-          z-index: 4;
-          &:hover, &:active, &:focus{
-            outline: none;  
-            cursor: pointer;
-          }
-          &::placeholder {  
-            color: $color-blue2;
-            opacity: 1;  
-            font-family: $font-future;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 23px;
-          }
-          
-          &:-ms-input-placeholder {  
-            color: $color-blue2;
-            font-family: $font-future;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 23px;
-          }
-          
-          &::-ms-input-placeholder {  
-            color: $color-blue2;
-            font-family: $font-future;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 23px;
-          }
-        }
-        .form_btn{
-          position: absolute;
-          z-index: 5;
-          right: 0;
-          top: 0;
-          height: 100%;
-          min-width: 160px;
-          padding: 10px 20px;
-          border-radius: 20px;
-          font-family: $font-future;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 23px; 
-          color: $color-white;
-          background: $background-blue-gradient;
-          border: 1px solid transparent;
-          outline: none;
-          transition: 0.3s all; 
-          &:hover, &:focus, &:active{
-            cursor: pointer;
-            background: $background-white;
-            color: $color-blue;
-            border: 1px solid $color-blue;
-          }
-        }
-      }
-
-    }
-  }
-   
-}
-.footer_soz{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  &_item{
-    margin-right: 30px;
-    margin-top: 15px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s all;
-    &_img{
-      width: 20px;
-      height: 20px;
-      // background: $background-white;
-      // mask-repeat: no-repeat;
-      // mask-size: contain;
-      // -webkit-mask-repeat: no-repeat;
-      // -webkit-mask-size: contain;
-      transition: 0.3s all;
-      @include sm {
-        width: 36px;
-        height: 36px;
-      }
-    }
-    &:last-child{
-      .footer_soz_item_img{
-        width: 29px;
-        height: 29px;
-        @include sm {
-          width: 54px;
-          height: 54px;
-        }
-      }
-    }
-    &:hover { 
-      & > .footer_soz_item_img{
-        cursor: pointer;
-        // background: $background-blue;
-        transform: scale(1.2);
-      }
-    } 
-  }
-}
-
-.footer_nav{
-  display: flex;
-  flex-direction: row;
-  // flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 0 15px;
-  @include md {
-    flex-wrap: wrap;
-  }
-  @include sm {
-    padding: 0 0px;
-  }
-  &_list{
-    margin: 40px 20px 0 0px;
-    width: 100%;
-    max-width: 265px; 
-    display: flex;
-    flex-direction: column;
-    &:last-child{
-      margin: 40px 0px 0 0px;
-    }
-    h2{
-      font-family: $font-future;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 38px; 
-      color: $color-blue3;
-      margin: 0 0 17px;
-      @include sm { 
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 28px;
-      }
-    }
-    ul{
-      margin: 0;
-      padding: 0;
-      li{
-        margin: 0 0 0px;
-      }
-      li, li *{
-        list-style: none;
-        font-family: $font-future;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 142.2%; 
-        color: $color-white;
-        transition: 0.3s all;
-        @include sm { 
-          font-size: 18px;
-          line-height: 142.2%;
-        }
-        &:hover{
-          color: $color-blue3;
-        }
-        a{
-          text-decoration: none; 
-        }
-      }
-    }
-  }
-}
-
+ 
 .footer_bottom{
   position: relative;
   z-index: 9;
-  background: $background-blue4;
+  background: $color-gray2;
   padding: 15px 0;
   margin: 0;
   p, a{
@@ -312,7 +25,7 @@
     &:hover{
       cursor: pointer;
       text-decoration: none;
-      color: $color-blue3;
+      color: $color-green;
     }
   }
 }
@@ -330,7 +43,7 @@
   }
   a{
     padding: 0;
-    margin: 0;
+    margin: 0 0 0px;
     font-family: $font-future;
     font-style: normal;
     font-weight: normal;
@@ -340,11 +53,16 @@
     text-decoration: none;
     transition: 0.3s all;
       &:hover{
-        color: $color-blue3;
+        color: $color-green;
       }
       @include sm { 
         font-size: 16px;
         line-height: 21px;
+        margin: 0 0 10px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
       }
     }
 }
@@ -357,7 +75,7 @@
       flex-wrap: wrap;
       font-size: 16px;
       line-height: 21px;
-      p{
+      p, a{
         margin-bottom: 0;
       }
     }

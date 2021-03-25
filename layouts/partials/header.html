@@ -1,73 +1,37 @@
 <header class="header {{ if .Params.header_color }} blue {{ end}}">
   <div class="social">
     <div class="container">
-      <div class="social_cont">
-          <a class="social_link" href="#">
+      <div class="social_cont"> 
+        {{ range .Site.Data.general.social }}
+          <a class="social_link" href="{{ .link }}">
             <div class="social_img"
-            style="-webkit-mask-image: url('../img/svg/facebook.svg');
-                        mask-image: url('../img/svg/facebook.svg');"
+            style="-webkit-mask-image: url({{ .img | absURL }});
+                        mask-image: url({{ .img | absURL }});"
             ></div>
             <span class="only-optimazy">my text</span>
             <!-- <img src="{{ "img/svg/facebook.svg" | absURL }}" alt="linkedin"> -->
           </a>
-          <a class="social_link" href="#">
-            <div class="social_img"
-            style="-webkit-mask-image: url('../img/svg/instagram.svg');
-                        mask-image: url('../img/svg/instagram.svg');"
-            ></div>
-            <span class="only-optimazy">my text</span>
-            <!-- <img src="{{ "img/svg/instagram.svg" | absURL }}" alt="linkedin"> -->
-          </a>
-          <a class="social_link" href="#">
-            <div class="social_img"
-            style="-webkit-mask-image: url('../img/svg/linkedin.svg');
-                        mask-image: url('../img/svg/linkedin.svg');"
-            ></div>
-            <span class="only-optimazy">my text</span>
-            <!-- <img src="{{ "img/svg/linkedin.svg" | absURL }}" alt="linkedin"> -->
-          </a>
-          <a class="social_link" href="#">
-            <div class="social_img"
-            style="-webkit-mask-image: url('../img/svg/twitter.svg');
-                        mask-image: url('../img/svg/twitter.svg');"
-            ></div>
-            <span class="only-optimazy">my text</span>
-            <!-- <img src="{{ "img/svg/twitter.svg" | absURL }}" alt="linkedin"> -->
-          </a>
+        {{ end }}
       </div>
     </div>
   </div>
   <div class="container"> 
     <div class="header_cont">
-      {{ if isset .Site.Params "logo" }}
+      {{ if .Site.Data.general.logo }}
       <a class="header_cont_logo" href="{{ .Site.BaseURL }}" >
-        <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="Flowers" >
+        <img class="avatar-img" src="{{ .Site.Data.general.logo | absURL }}" alt="Flowers" >
       </a>
       {{ end }} 
       {{ $url := .RelPermalink }}
       {{ $link := .Site.BaseURL }}
-      <nav class="header_cont_nav">
+      <nav class="header_cont_nav"> 
         <ul class="header_cont_nav_list">
-          {{ range .Site.Menus.main.ByWeight }}
-          <li class="header_cont_nav_list_items {{ if eq $url .URL }} active {{ end }} 
-          {{ range .Children }}
-            {{ if eq $url .URL }}
-              active 
-            {{ end }}
-          {{ end }}
+          {{ range .Site.Data.general.menu }}
+          <li class="header_cont_nav_list_items {{ if eq $url .URL }} active {{ end }}
           "> 
             <a class="header_cont_nav_list_items_link"
-              href="{{$link}}{{ if.URL }}{{ .URL }}{{ end }}">{{ .Name }}
-            </a>
-            {{ if .HasChildren }}
-            <div class="header_cont_nav_list_items_children"> 
-            {{ range .Children }}
-              <a class="header_cont_nav_list_items_children_link_children {{ if eq $url .URL }}
-              active 
-              {{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-            {{ end }}
-            </div>
-            {{ end }}
+              href="{{$link}}{{ if.url }}{{ .url }}{{ end }}">{{ .name }}
+            </a> 
           </li>
           {{ end }}
         </ul> 
@@ -80,3 +44,4 @@
     </div> 
   </div>
 </header>
+<a class="phone-call" href="tel:{{ .Site.Data.general.phone_number }}"><img src="{{ "img/phone-call.svg" | absURL }}" width="26" alt="Call Now" title="Call Now"></a>

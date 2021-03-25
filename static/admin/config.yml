@@ -1,0 +1,119 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/privacy-policy.md"
+        label: "Privacy Policy"
+        name: "privacy-policy"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Layout, name: layout, widget: string} 
+          - {label: Page Title, name: page_title, widget: string} 
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "content/contract.md"
+        label: "Contract"
+        name: "contract"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Layout, name: layout, widget: string} 
+          - {label: Page Title, name: page_title, widget: string}
+          - {label: Paragraph, name: paragraph, widget: string} 
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "content/contact.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Layout, name: layout, widget: string} 
+          - {label: Page Title, name: page_title, widget: string}
+          - {label: Map Title, name: map_title, widget: string}
+          - {label: Map Paragraph, name: map_paragraph, widget: string}
+          - {label: Map Office, name: map_office, widget: string}
+          - {label: Map Key, name: map_key, widget: string}
+          - {label: Map Zoom, name: map_zoom, widget: string}
+          - {label: Map Lat, name: map_lat, widget: string}
+          - {label: Map lng, name: map_lng, widget: string} 
+      - file: "content/_index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Layout, name: layout, widget: string}
+          - {label: Hero Title, name: hero_title, widget: string}
+          - {label: Hero Title Black, name: hero_title_black, widget: string}
+          - {label: Description 1, name: hero_text_1, widget: string}
+          - {label: Description 2, name: hero_text_2, widget: string}
+          - {label: Hero Btn Text 1, name: hero_btn_1, widget: string}
+          - {label: Hero Btn Text 2, name: hero_btn_2, widget: string}
+          - {label: Hero Img, name: hero_img, widget: image}
+          - {label: About Title, name: about_title, widget: string}
+          - {label: "About Text List", name: about_text_list, widget: list, fields: [ 
+              {label: "Text", name: "text", widget: "text"}
+            ]}
+          - {label: About Img, name: about_img, widget: image}
+          - {label: Work Title, name: work_title, widget: string}
+          - {label: "Work List", name: work_list, widget: list, fields: [ 
+              {label: List Img, name: img, widget: image},
+              {label: "List Text", name: "text", widget: "text"}
+            ]}
+          - {label: Variant Title, name: variant_title, widget: string}
+          - {label: "Variant Text List", name: variant_text_list, widget: list, fields: [ 
+              {label: "List Text", name: "text", widget: "text"}
+            ]}
+          - {label: Variant Img, name: variant_img, widget: image}
+          - {label: Aption Title, name: aption_title, widget: string}
+          - {label: "Aption List", name: aption_list, widget: list, fields: [ 
+              {label: List Img, name: img, widget: image},
+              {label: "List Text", name: "text", widget: "text"}
+            ]}
+          - {label: Algoritm Title, name: algoritm_title, widget: string}
+          - {label: "Algoritm Text List", name: algoritm_list, widget: list, fields: [ 
+              {label: "List Text", name: "text", widget: "text"}
+            ]}
+          - {label: Why We Title, name: why_we_title, widget: string}
+          - {label: "Why We List", name: why_we_list, widget: list, fields: [ 
+              {label: "List Number", name: "number", widget: "text"},
+              {label: "List Text", name: "text", widget: "text"}
+            ]}
+          - {label: Faq Title, name: faq_title, widget: string}
+          - {label: "Faq List", name: faq, widget: list, fields: [  
+              {label: "Question", name: "title", widget: "text"},
+              {label: Answer, name: answer, widget: markdown}
+            ]}
+          - {label: Team Title, name: team_title, widget: string}
+          - {label: Team Img, name: team_img, widget: image}
+          - {label: "Team We List", name: team_list, widget: list, fields: [ 
+              {label: List Img, name: img, widget: image},
+              {label: "List name", name: "name", widget: "text"},
+              {label: "List text", name: "text", widget: "text"}
+            ]}
+          - {label: Contact Title, name: contact_title, widget: string}
+      - file: "data/general.yaml"
+        label: "General Settings Site"
+        name: "General"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Author, name: author, widget: string}
+          - {label: "Social", name: social, widget: list, fields: [ 
+              {label: Img, name: img, widget: image},
+              {label: "Link", name: "link", widget: "text"}
+            ]}
+          - {label: Logo, name: logo, widget: image}
+          - {label: "Menu", name: menu, widget: list, fields: [ 
+              {label: "Text", name: "name", widget: "text"},
+              {label: "Link", name: "url", widget: "text"}
+            ]}
+          - {label: Email, name: email, widget: string}
+          - {label: Phone Number, name: phone_number, widget: string}

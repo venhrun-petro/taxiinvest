@@ -3,22 +3,26 @@
   {{ partial "head.html" . }}
   <body>
   {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-  <sections class="content">
-    <div class="container">
-        <div class="content_cont">
-            <div class="content_cont_top">
-                <div class="content_cont_top_info">
-                    <h2>{{ .Params.page_title }}</h2>
-                    <p >{{ .Params.paragraph }}</p>
-                </div> 
+
+    {{ if eq .Page  (.Site.GetPage "contact") }}
+    {{ partial "blocks/map.html" . }}
+    {{ else }}
+        <sections class="content">
+            <div class="container">
+                <div class="content_cont">
+                    <div class="content_cont_top">
+                        <div class="content_cont_top_info">
+                            <h2>{{ .Params.page_title }}</h2> 
+                        </div> 
+                    </div>
+                    <div class="content_cont_bottom">
+                        {{ .Content  }}
+                    </div>
+                </div>
             </div>
-            <div class="content_cont_bottom">
-                {{ .Content  }}
-            </div>
-        </div>
-        <!-- <a href="{{ .Site.BaseURL }}{{ .Params.grey_url }}" class="grey-button">{{ .Params.grey_button_text | markdownify }}</a> -->
-    </div>
-</sections>
+        </sections>
+    {{end}}
+
   {{ partial "footer.html" . }} 
   </body>
 </html>

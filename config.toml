@@ -1,13 +1,13 @@
 Paginate = 6
 assetDir = "assets/" 
-# baseurl = "http://localhost:1313/"
-baseurl = "/"
+baseurl = "https://www.investtaxi.info/"
+# baseurl = "/"
 canonifyurls = true
 contentdir = "content"
 layoutdir = "layouts"
 paginatePath = "page"
 publishdir = "public"
-title = "Taxi Invest"
+title = "Invest Taxi"
 
 [Params]
 comments = true
@@ -15,9 +15,9 @@ commit = false
 favicon = "img/favicon.png"
 logo = "img/logo.png" 
 rss = true
-description= "Taxi Invest"
+description= "Invest Taxi"
 author = "Lubomur"
-url = "https://taxiinvest.netlify.app/"
+url = "https://www.investtaxi.info/"
 
 [[menu.main]]
 name = "Про Нас"

@@ -1,11 +1,65 @@
-{{ define "header" }}<!-- No header on 404 pages -->{{ end }}
-{{ define "main" }}
-  <div role="main" class="container main-content">
-  <div class="text-center">
-    <h1>{{ i18n "pageNotFound" }}</h1>
-    <br/>
-    <img src="{{ .Site.BaseURL }}/img/404-southpark.jpg" />
-  </div>
-  </div>
-{{ end }}
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    <header class="header blue ">
+      <div class="social">
+        <div class="container">
+          <div class="social_cont"> 
+            {{ range .Site.Data.general.social }}
+              <a class="social_link" href="{{ .link }}">
+                <div class="social_img"
+                style="-webkit-mask-image: url({{ .img | absURL }});
+                            mask-image: url({{ .img | absURL }});"
+                ></div>
+                <span class="only-optimazy">my text</span>
+                <!-- <img src="{{ "img/svg/facebook.svg" | absURL }}" alt="linkedin"> -->
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="container"> 
+        <div class="header_cont">
+          {{ if .Site.Data.general.logo }}
+          <a class="header_cont_logo" href="{{ .Site.BaseURL }}" >
+            <img class="avatar-img" src="{{ .Site.Data.general.logo | absURL }}" alt="Flowers" >
+          </a>
+          {{ end }} 
+          {{ $url := .RelPermalink }}
+          {{ $link := .Site.BaseURL }}
+          <nav class="header_cont_nav"> 
+            <ul class="header_cont_nav_list">
+              {{ range .Site.Data.general.menu }}
+              <li class="header_cont_nav_list_items {{ if eq $url .URL }} active {{ end }}
+              "> 
+                <a class="header_cont_nav_list_items_link"
+                  href="{{$link}}{{ if.url }}{{ .url }}{{ end }}">{{ .name }}
+                </a> 
+              </li>
+              {{ end }}
+            </ul> 
+          </nav>
+          <div class="hamburger hamburger--slider js-hamburger">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+          </div>
+        </div> 
+      </div>
+    </header>
+  <main class="main"> 
+    <div class="warning-404">
+      <div class="container">
+        <div class="warning-404_cont">
+          <h2>OOPS!<br><span>Something went wrong</span></h2>
+          <h2>Page not found</h2>
+          <a class="aption_btn" href="{{ .Site.BaseURL }}">Go To Home</a>
+        </div>
+      </div>
+    </div> 
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>
 

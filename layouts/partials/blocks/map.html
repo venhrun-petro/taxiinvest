@@ -1,0 +1,52 @@
+<section class="map" >
+    <div class="container">
+        <div class="row"> 
+            {{ with .Params.map_title }}<h3>{{ . }}</h3>{{ end }} 
+            {{ with .Params.map_paragraph }}<p class="map_paragraph">{{ . }}</p>{{ end }} 
+            <div class="map_cont">
+                <div class="map_list">
+                    <h4>Головний офіс:</h4> 
+                    {{ with .Params.map_office }}<p>{{ . }}</p>{{ end }} 
+                    <h4>Телефон:</h4>
+                    <p><a href="tel:{{ .Site.Data.general.phone_number }}">{{ .Site.Data.general.phone_number }}​</a></p>
+                    <h4>Email:</h4>
+                    <p><a href="mailto:{{ .Site.Data.general.email }}">{{ .Site.Data.general.email }}​</a></p>
+                </div>
+                <div class="map_right" id="googlemaps">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key={{ .Params.map_key }}"></script>
+<script>
+    var position = [{{ .Params.map_lat }}, {{ .Params.map_lng }} ];
+
+    function showGoogleMaps() {
+
+    var latLng = new google.maps.LatLng(position[0], position[1]);
+
+    var mapOptions = {
+        zoom: {{ .Params.map_zoom }}, 
+        streetViewControl: false, 
+        scaleControl: true, 
+        scrollwheel: false, 
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: latLng
+    };
+
+    map = new google.maps.Map(document.getElementById('googlemaps'),
+        mapOptions);
+    marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+    });
+    }
+
+    google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+
+</script>

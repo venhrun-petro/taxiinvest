@@ -1,30 +1,21 @@
 <section class="hero">
     <div class="container">
-         <div class="hero_cont">
-        
-            <h1>Taxi<span class="black">invest</span></h1>
-            <h2 class="only-optimazy">me text</h2>
-            <h3>Інвестиція в авто для роботи в Таксі дохідність від 40% річних</h3>
+         <div class="hero_cont"> 
+            {{ if .Params.hero_title }}<h1>{{ .Params.hero_title }}<span class="black">{{ .Params.hero_title_black }}</span></h1>{{ end }}
+            {{ if .Params.hero_text_1 }}<h3>
+                {{ .Params.hero_text_1 }}
+                <br />
+                {{ .Params.hero_text_2 }}
+            </h3>{{ end }}
             <div class="hero_btn"> 
-                <a class="general-button" href="#contact"> 
-                    <div class="general-button_img" style="-webkit-mask-image: url('../img/svg/heart.svg');
-                                mask-image: url('../img/svg/heart.svg');">
-                    </div>
-                    <span>Залишити заяву</span>
-                </a>
-                <a class="general-button" href="#about">
-                    <span>Про наc</span>
-                    <div class="general-button_img" style="-webkit-mask-image: url('../img/svg/arrow.svg');
-                                mask-image: url('../img/svg/arrow.svg');">
-                    </div>
-                </a>
-            </div>
-
-
-             
+                {{ with .Params.hero_btn_1 }}<a class="general-button" href="#contact">  
+                    <span>{{ . }}</span>
+                </a>{{ end }}
+                {{ with .Params.hero_btn_2 }}<a class="general-button" href="#about">
+                    <span>{{ . }}</span> 
+                </a>{{ end }}
+            </div> 
         </div>
-    </div>
-    <!-- {{- with .Params.img -}}{{- end -}} -->
-    
-    <img class="general_img lazy" data-src="{{ "img/clients.webp" | absURL }}" data-srcset="{{ "img/clients.webp" | absURL }}" alt="bg"/>
+    </div>  
+    {{ with .Params.hero_img }}<img class="general_img lazy" data-src="{{ . | absURL }}" data-srcset="{{ . | absURL }}" alt="bg"/>{{ end }}
 </section>
